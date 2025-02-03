@@ -11,131 +11,137 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <div class="navBarEntero d-flex align-items-center justify-content-between p-3 bg-light">
-        <!-- Sección de la izquierda -->
         <div class="d-flex align-items-center">
             <i class="fa-brands fa-instagram me-2 fs-4"></i>
             <p class="mb-0 fs-5">Instagram</p>
         </div>
 
-        <!-- Botón de "Crear un post" -->
         <button type="button" class="btn btn-success me-3 ms-auto" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
             Create a new post
         </button>
-          
-        <!-- Modal -->
+
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Create a new post</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Caption:</p>
-                    <div class="form-floating">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                        <label for="floatingTextarea">Add the caption of your post here</label>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Create a new post</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="d-flex mt-3">
-                        <button type="button" class="btn btn-outline-secondary me-2">
-                            <i class="fa-solid fa-camera"></i>
-                        </button>
-                        <button type="button" class="btn btn-outline-secondary">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </button>
+                    <div class="modal-body">
+                        <p>Caption:</p>
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                            <label for="floatingTextarea">Add the caption of your post here</label>
+                        </div>
+                        <div class="d-flex mt-3">
+                            <button type="button" class="btn btn-outline-secondary me-2">
+                                <i class="fa-solid fa-camera"></i>
+                            </button>
+                            <button type="button" class="btn btn-outline-secondary">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Publish</button>
                     </div>
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Publish</button>
-                </div>
-              </div>
             </div>
-        </div>        
+        </div>
 
-        <!-- Menú desplegable -->
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="fa-solid fa-gear"></i>
             </button>
             <ul class="dropdown-menu dropdown-menu-end">
-              <li><button class="dropdown-item" type="button">Action</button></li>
-              <li><button class="dropdown-item" type="button">Another action</button></li>
-              <li><button class="dropdown-item" type="button">Something else here</button></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
+                <li><button class="dropdown-item" type="button">Profile</button></li>
+                <li><button class="dropdown-item" type="button">Accesibility</button></li>
+                <li><button class="dropdown-item" type="button">Privacy and Data</button></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Log out</a></li>
             </ul>
         </div>
     </div>
 
     <div class="container mt-5">
-        <!-- Botones para mostrar los grids -->
-        <div class="mb-3 text-center">
-            <button class="btn btn-primary" id="btnGrid1"><i class="fa-solid fa-grip"></i></button>
-            <button class="btn btn-secondary" id="btnGrid2"><i class="fa-solid fa-square"></i></button>
-        </div>
-    
-        <!-- Grids -->
-        <div class="row" id="grid1"">
-            <div class="d-flex justify-content-center gap-3">
-                <img src="https://www.subexpuesta.com/img/content/paisajes-naturales_1.webp" class="col-4 img-fluid mb-2" alt="Imagen 1" style="max-width: 200px;">
-                <img src="https://bargainfotos.com/blog/wp-content/uploads/2022/07/beautiful-shot-of-small-lake-with-wooden-rowboat-in-focus-and-breathtaking-clouds-in-the-sky.jpg" class="col-4 img-fluid mb-2" alt="Imagen 2" style="max-width: 200px;">
-                <img src="https://www.subexpuesta.com/img/content/paisajes-naturales_1.webp" class="col-4 img-fluid mb-2" alt="Imagen 3" style="max-width: 200px;">
+        <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><i class="fa-solid fa-table-cells"></i></a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="fa-solid fa-square"></i></a>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="d-flex justify-content-center gap-3">
+                    <img src="https://www.subexpuesta.com/img/content/paisajes-naturales_1.webp" class="col-4 img-fluid mb-2" alt="Imagen 1" style="max-width: 300px;">
+                    <img src="https://bargainfotos.com/blog/wp-content/uploads/2022/07/beautiful-shot-of-small-lake-with-wooden-rowboat-in-focus-and-breathtaking-clouds-in-the-sky.jpg" class="col-4 img-fluid mb-2" alt="Imagen 2" style="max-width: 300px;">
+                    <img src="https://cdn.pixabay.com/photo/2016/02/10/21/59/landscape-1192669_640.jpg" class="col-4 img-fluid mb-2" alt="Imagen 3" style="max-width: 300px;">
+                </div>
+                <div class="d-flex justify-content-center gap-3">
+                    <img src="https://plus.unsplash.com/premium_photo-1709579654090-3f3ca8f8416b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fG5hdHVyYWxlemElMjBwYWlzYWplfGVufDB8fDB8fHww" class="col-4 img-fluid mb-2" alt="Imagen 1" style="max-width: 300px;">
+                    <img src="https://greenecoera.com/wp-content/uploads/img/img/img/paisaje-naturales.jpg" class="col-4 img-fluid mb-2" alt="Imagen 2" style="max-width: 300px;">
+                    <img src="https://www.subexpuesta.com/img/content/paisajes-nocturnos-tecnicas_1.webp" class="col-4 img-fluid mb-2" alt="Imagen 3" style="max-width: 300px;">
+                </div>
+                <div class="d-flex justify-content-center gap-3">
+                    <img src="https://www.elviajerofisgon.com/wp-content/uploads/2024/04/La-Playa-las-Catedrales-es-uno-de-los-seis-paisajes-naturales-mas-impresionantes-de-Espana.-Adobe-Stock-1280x720.jpg" class="col-4 img-fluid mb-2" alt="Imagen 1" style="max-width: 300px;">
+                    <img src="https://content.nationalgeographic.com.es/medio/2021/11/29/fotografo-de-paisajes-naturales-del-ano-ganador-en-la-categoria-nightscape_560d46c6_2000x1600.jpg" class="col-4 img-fluid mb-2" alt="Imagen 2" style="max-width: 300px;">
+                    <img src="https://clinicavesal.es/wp-content/uploads/2017/11/cuidados-agapornis.jpg" class="col-4 img-fluid mb-2" alt="Imagen 3" style="max-width: 300px;">
+                </div>
             </div>
-            <div class="d-flex justify-content-center gap-3">
-                <img src="https://www.subexpuesta.com/img/content/paisajes-naturales_1.webp" class="col-4 img-fluid mb-2" alt="Imagen 1" style="max-width: 200px;">
-                <img src="https://www.subexpuesta.com/img/content/paisajes-naturales_1.webp" class="col-4 img-fluid mb-2" alt="Imagen 2" style="max-width: 200px;">
-                <img src="https://www.subexpuesta.com/img/content/paisajes-naturales_1.webp" class="col-4 img-fluid mb-2" alt="Imagen 3" style="max-width: 200px;">
-            </div>
-            <div class="d-flex justify-content-center gap-3">
-                <img src="https://www.subexpuesta.com/img/content/paisajes-naturales_1.webp" class="col-4 img-fluid mb-2" alt="Imagen 1" style="max-width: 200px;">
-                <img src="https://www.subexpuesta.com/img/content/paisajes-naturales_1.webp" class="col-4 img-fluid mb-2" alt="Imagen 2" style="max-width: 200px;">
-                <img src="https://www.subexpuesta.com/img/content/paisajes-naturales_1.webp" class="col-4 img-fluid mb-2" alt="Imagen 3" style="max-width: 200px;">
-            </div>
-        </div>
-    
-        <div class="row" id="grid2" style="display: none;">
-            <div class="container mt-5">
-                <div class="card" style="max-width: 350px; margin: 0 auto;">
-                    
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                        <h5 class="mb-0">Título de la Imagen</h5>
-                        <small class="text-muted">24 de Enero, 2025</small>
+
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div class="container mt-5">
+                    <div class="card mb-4" style="max-width: 350px; margin: 0 auto;">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">Payaro</h5>
+                            <small class="text-muted"><strong>18/9</strong></small>
+                        </div>
+                        <img src="https://clinicavesal.es/wp-content/uploads/2017/11/cuidados-agapornis.jpg" class="col-4 card-img-top" alt="Descripción de la Imagen" style="max-width: 350px;">
+                        <div class="card-footer m-0">
+                            <p><strong>1208 likes</strong></p>
+                            <p>Suele molestar en clase pero se le quiere.</p>
+                        </div>
                     </div>
-            
-                    <img src="https://www.subexpuesta.com/img/content/paisajes-naturales_1.webp" class="col-4 card-img-top" alt="Descripción de la Imagen" style="max-width: 350px;">
-            
-                    <div class="card-footer text-center">
-                        <p class="mb-0">Texto básico en el pie de página</p>
+                    <div class="card mb-4" style="max-width: 350px; margin: 0 auto;">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">Coneyo</h5>
+                            <small class="text-muted"><strong>30/5</strong></small>
+                        </div>
+                        <img src="https://content.elmueble.com/medio/2023/07/31/conejo-belier_213c663d_230731200306_1000x750.jpg" class="col-4 card-img-top" alt="Descripción de la Imagen" style="max-width: 350px;">
+                        <div class="card-footer m-0">
+                            <p><strong>808 likes</strong></p>
+                            <p>Muerde</p>
+                        </div>
+                    </div>
+                    <div class="card mb-4" style="max-width: 350px; margin: 0 auto;">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">Colega</h5>
+                            <small class="text-muted"><strong>1/6</strong></small>
+                        </div>
+                        <img src="https://i.pinimg.com/736x/d4/e9/31/d4e931a7ffe3680d226a4e5289422d79.jpg" class="col-4 card-img-top" alt="Descripción de la Imagen" style="max-width: 350px;">
+                        <div class="card-footer m-0">
+                            <p><strong>904 likes</strong></p>
+                            <p>Muerde pero menos que Coneyo.</p>
+                        </div>
+                    </div>
+                    <div class="card mb-4" style="max-width: 350px; margin: 0 auto;">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">Eslovenia</h5>
+                            <small class="text-muted"><strong>20/8</strong></small>
+                        </div>
+                        <img src="https://www.subexpuesta.com/img/content/paisajes-naturales_1.webp" class="col-4 card-img-top" alt="Descripción de la Imagen" style="max-width: 350px;">
+                        <div class="card-footer m-0">
+                            <p><strong>204 likes</strong></p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script>
-        // Obtener los botones
-        const btnGrid1 = document.getElementById('btnGrid1');
-        const btnGrid2 = document.getElementById('btnGrid2');
-    
-        // Obtener los grids
-        const grid1 = document.getElementById('grid1');
-        const grid2 = document.getElementById('grid2');
-    
-        // Función para mostrar un grid y ocultar el otro
-        function showGrid(gridToShow, gridToHide) {
-            gridToShow.style.display = 'block';
-            gridToHide.style.display = 'none';
-        }
-    
-        // Event listeners para los botones
-        btnGrid1.addEventListener('click', () => {
-            showGrid(grid1, grid2);
-        });
-    
-        btnGrid2.addEventListener('click', () => {
-            showGrid(grid2, grid1);
-        });
-    </script>
 </body>
 </html>
